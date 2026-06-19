@@ -157,7 +157,10 @@ export function DashboardLayout({ userRole, onLogout }: DashboardLayoutProps) {
           <Menu className="size-6" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[min(20rem,85vw)] p-0">
+      <SheetContent
+        side="left"
+        className="w-[min(20rem,85vw)] p-0 [&>button:last-child]:text-white [&>button:last-child]:hover:bg-blue-800/40 [&>button:last-child]:focus:ring-white"
+      >
         <SheetHeader className="p-6 bg-blue-900 text-white">
           <div className="flex items-center gap-3">
             <div className="bg-blue-600 p-2 rounded-lg">
@@ -193,8 +196,8 @@ export function DashboardLayout({ userRole, onLogout }: DashboardLayoutProps) {
                 }}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                   activeView === item.id
-                    ? 'bg-blue-100 text-blue-900'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'border border-gray-200 bg-white text-slate-700 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-800 dark:border-slate-600 dark:bg-[#151f32] dark:text-slate-100 dark:hover:border-blue-500 dark:hover:bg-[#1d2b45] dark:hover:text-white'
                 }`}
                 aria-label={item.ariaLabel}
                 aria-current={activeView === item.id ? 'page' : undefined}
@@ -211,7 +214,7 @@ export function DashboardLayout({ userRole, onLogout }: DashboardLayoutProps) {
             <AlertDialogTrigger asChild>
               <Button
                 variant="ghost"
-                className="w-full justify-start text-red-600 hover:bg-red-50"
+                className="w-full justify-start border border-gray-200 text-red-600 hover:bg-red-50 dark:border-slate-600 dark:text-red-400 dark:hover:bg-red-950/40 dark:hover:text-red-200"
                 aria-label={t('auth.logout')}
               >
                 <LogOut className="size-5 mr-3" aria-hidden="true" />

@@ -7,7 +7,11 @@
     "userInterfaceStyle": "light",
     "assetBundlePatterns": ["**/*"],
     "ios": { "supportsTablet": true },
-    "android": { "edgeToEdgeEnabled": true },
+    "android": { "edgeToEdgeEnabled": false },
+    "androidNavigationBar": {
+      "backgroundColor": "#020617",
+      "barStyle": "light-content"
+    },
     "web": { "bundler": "metro" }
   }
 }

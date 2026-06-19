@@ -28,20 +28,20 @@ export function FloatingLanguageSwitcher() {
   };
 
   return (
-    <div className="fixed bottom-3 right-3 z-50 sm:bottom-6 sm:right-6">
+    <div className="floating-language-switcher fixed z-[70]">
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button
-            className="size-11 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white sm:size-14"
+            className="size-14 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white"
             aria-label={t('settings.language')}
           >
             <div className="flex flex-col items-center justify-center">
-              <Globe className="size-4 sm:size-5" />
-              <span className="mt-0.5 text-[10px] sm:text-xs">{currentLanguage.code.toUpperCase()}</span>
+              <Globe className="size-5" />
+              <span className="mt-0.5 text-xs">{currentLanguage.code.toUpperCase()}</span>
             </div>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-48">
+        <DropdownMenuContent align="end" side="top" sideOffset={10} collisionPadding={16} className="w-48">
           {languages.map((lang) => (
             <DropdownMenuItem
               key={lang.code}
