@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
-import { webViewBaseUrl, webViewOriginWhitelist } from '../config/webView';
-import { colors } from '../constants/colors';
-import webBundle from '../webBundle';
+import { webViewBaseUrl, webViewOriginWhitelist } from '../../config/webView';
+import { colors } from '../../constants/colors';
+import webBundle from '../../app/webBundle';
 import { WebViewLoading } from './WebViewLoading';
 
 export function HidroSmartWebView() {

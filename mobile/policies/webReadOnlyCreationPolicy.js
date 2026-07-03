@@ -1,31 +1,4 @@
-import React from 'react';
-
-import webBundle from '../webBundle';
-
-const creationButtonLabels = [
-  'registrar hogar',
-  'registrar nuevo hogar',
-  'registrar dispositivo',
-  'registrar nuevo dispositivo',
-  'agregar hogar',
-  'agregar nuevo hogar',
-  'agregar dispositivo',
-  'agregar nuevo dispositivo',
-  'add home',
-  'add new home',
-  'add device',
-  'add new device',
-  'register home',
-  'register new home',
-  'register device',
-  'register new device',
-  'new home',
-  'new device',
-  'novo lar',
-  'novo dispositivo',
-  'nuova casa',
-  'nuovo dispositivo',
-];
+import { creationButtonLabels } from '../constants/creationButtonLabels';
 
 const webReadOnlyCreationPolicy = `
   <script>
@@ -76,26 +49,6 @@ const webReadOnlyCreationPolicy = `
   </script>
 `;
 
-const webBundleWithoutCreation = webBundle.replace('</body>', `${webReadOnlyCreationPolicy}</body>`);
-
-export function HidroSmartWebView() {
-  return (
-    <iframe
-      title="HidroSmart"
-      srcDoc={webBundleWithoutCreation}
-      style={styles.frame}
-      sandbox="allow-downloads allow-forms allow-modals allow-popups allow-same-origin allow-scripts"
-    />
-  );
+export function applyWebReadOnlyCreationPolicy(html) {
+  return html.replace('</body>', `${webReadOnlyCreationPolicy}</body>`);
 }
-
-const styles = {
-  frame: {
-    width: '100%',
-    height: '100%',
-    flex: 1,
-    border: 0,
-    display: 'block',
-    backgroundColor: 'transparent',
-  },
-};

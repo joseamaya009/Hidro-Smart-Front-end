@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { colors } from '../constants/colors';
-import { statusBarTopOffset } from '../constants/layout';
+import { colors } from '../../constants/colors';
+import { statusBarTopOffset } from '../../constants/layout';
 import { AppStatusBar } from './AppStatusBar';
 
 export function MobileShell({ children }) {

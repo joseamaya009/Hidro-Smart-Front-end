@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { Platform } from 'react-native';
 import * as NavigationBar from 'expo-navigation-bar';
 
-import { HidroSmartWebView } from './components/HidroSmartWebView';
-import { MobileShell } from './components/MobileShell';
+import { HidroSmartWebView, MobileShell } from '../components';
 
 export default function App() {
   useEffect(() => {
