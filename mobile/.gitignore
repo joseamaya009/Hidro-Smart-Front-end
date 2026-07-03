@@ -1,0 +1,55 @@
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+.node_repl_history
+
+# Metro / bundler / cache
+.cache/
+.metro/
+.expo/
+.expo-shared/
+.expo/web/
+
+# Build output
+.web-dist/
+web-build/
+dist/
+build/
+
+# Android / iOS / Gradle
+android/
+android/**/build/
+.gradle/
+ios/
+ios/build/
+*.keystore
+
+# Environment
+.env
+.env.*
+
+# Coverage
+coverage/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Misc
+tmp/
+temp/
+*.tmp
+*.local
+.sass-cache
+.cache-loader
+.pnp.*
